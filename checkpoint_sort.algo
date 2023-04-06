@@ -1,12 +1,8 @@
 ALGORITHM inserer_sort_alg
 VAR
-    tab_card, tab_card2 : ARRAY_OF INTEGER; //le tableau des cartes
-    in_card: INTEGER //la carte à inserer
+    tab_card, tab_card2 : ARRAY_OF INTEGER
+    in_card: INTEGER
 BEGIN
-
-//la procedure qui permet d'inserer la carte à la bonne case
-//les parametres sont le tableau des cartes et la carte à inserer
-
 
 PROCEDURE inserer_sort(var tab : ARRAY_OF INTEGER)
 VAR
