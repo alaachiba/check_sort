@@ -1,0 +1,45 @@
+ALGORITHM inserer_sort_alg
+VAR
+    tab_card, tab_card2 : ARRAY_OF INTEGER; //le tableau des cartes
+    in_card: INTEGER //la carte à inserer
+BEGIN
+
+//la procedure qui permet d'inserer la carte à la bonne case
+//les parametres sont le tableau des cartes et la carte à inserer
+
+
+PROCEDURE inserer_sort(var tab : ARRAY_OF INTEGER)
+VAR
+    i, j, key: INTEGER
+BEGIN
+    FOR i FROM 1 TO  DO
+        key = tab[i]
+        j = i - 1
+        WHILE ((j >= 0) and (key < tab[j])) DO
+            tab[j+1] = tab[j]
+            j = j - 1
+        END_WHILE
+        tab[j+1] = key
+    END_FORj+
+END
+
+FUNCTION inserer_in_sorted_array(tab : ARRAY_OF INTEGER, card: INTEGER) : ARRAY_OF INTEGER
+VAR
+    i : INTEGER
+BEGIN
+    i = length(tab) - 1
+    WHILE ((i >= 0) and (tab[i] > card)) DO
+        arr[i+1] = arr[i]
+        i = i - 1
+    END_WHILE
+    tab[i+1] = card
+    RETURN tab
+END
+
+ write("entrez une carte")
+ read(in_card)
+ inserer_sort(tab_card)
+ tab_card2 := inserer_in_sorted_array(tab_card,in_card)
+ write(tab_card2)
+
+END
